@@ -19,6 +19,7 @@
 html { background: #070716; }
 
 body {
+  margin: 0;
   min-height: 100vh;
   font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
   color: var(--ink);
@@ -27,6 +28,76 @@ body {
     radial-gradient(circle at 92% 5%, rgba(103, 232, 249, 0.13), transparent 28rem),
     #070716;
 }
+
+.guide-shell {
+  display: grid;
+  grid-template-columns: 15.5rem minmax(0, 1fr);
+  gap: clamp(1.25rem, 3vw, 3rem);
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.guide-sidebar {
+  position: sticky;
+  top: 1.25rem;
+  align-self: start;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+}
+
+.guide-sidebar__brand {
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+  text-decoration: none;
+}
+
+.guide-nav {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.guide-nav a {
+  padding: 0.7rem 0.8rem;
+  color: var(--muted);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.guide-nav a:hover,
+.guide-nav a:focus-visible,
+.guide-nav a.is-active {
+  color: var(--aqua);
+  background: var(--surface-raised);
+  outline: 0;
+}
+
+.guide-sidebar__portfolio {
+  display: block;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.guide-sidebar__portfolio:hover,
+.guide-sidebar__portfolio:focus-visible { color: var(--pink); }
+
+.guide-main { min-width: 0; }
 
 .container-lg {
   max-width: 70rem;
@@ -168,4 +239,41 @@ body {
   .markdown-body h1 { font-size: clamp(2.4rem, 15vw, 3.8rem); }
   .markdown-body table th,
   .markdown-body table td { padding: 0.85rem; }
+}
+
+@media (max-width: 880px) {
+  .guide-shell {
+    display: block;
+    padding: 1rem;
+  }
+
+  .guide-sidebar {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .guide-sidebar__brand { margin: 0; }
+  .guide-sidebar__brand br { display: none; }
+
+  .guide-nav {
+    display: flex;
+    flex: 1 1 100%;
+    gap: 0.35rem;
+    overflow-x: auto;
+    padding-bottom: 0.15rem;
+  }
+
+  .guide-nav a { white-space: nowrap; }
+
+  .guide-sidebar__portfolio {
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border: 0;
+  }
 }
