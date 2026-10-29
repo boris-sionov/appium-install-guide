@@ -213,14 +213,26 @@ body .markdown-body code {
   background: #0d0d22;
 }
 
+/* Jekyll wraps highlighted blocks in a white .highlight container. */
+body .markdown-body .highlighter-rouge,
+body .markdown-body .highlight {
+  margin: 1.25rem 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 body .markdown-body pre,
 body .markdown-body .highlight pre {
   position: relative;
-  margin: 1.25rem 0;
-  padding: 3.4rem 1.4rem 1.2rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 3.15rem 1.25rem 1.25rem;
+  background: #0c0c16;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: none;
 }
 
 body .markdown-body pre code,
@@ -232,33 +244,61 @@ body .markdown-body .highlight pre code {
   line-height: 1.7;
 }
 
+body .markdown-body pre::before,
+body .markdown-body .highlight pre::before {
+  position: absolute;
+  top: 0.9rem;
+  left: 1.25rem;
+  color: var(--muted);
+  content: attr(data-language);
+  font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
 .copy-button {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  min-width: 4.75rem;
-  padding: 0.45rem 0.7rem;
-  color: var(--aqua);
-  background: var(--surface-raised);
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  top: 0.55rem;
+  right: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.55rem;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
   font: inherit;
-  font-size: 0.75rem;
-  font-weight: 800;
+  font-size: 0.8rem;
+  font-weight: 600;
   cursor: pointer;
+}
+
+.copy-button svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
 }
 
 .copy-button:hover,
 .copy-button:focus-visible {
-  color: var(--pink);
-  border-color: var(--pink);
-  outline: 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.copy-button:focus-visible {
+  outline: 2px solid var(--aqua);
+  outline-offset: 2px;
 }
 
 .copy-button.is-copied {
-  color: #070716;
-  background: var(--aqua);
-  border-color: var(--aqua);
+  color: var(--aqua);
+  background: transparent;
 }
 
 .markdown-body ::selection { color: #070716; background: var(--aqua); }
