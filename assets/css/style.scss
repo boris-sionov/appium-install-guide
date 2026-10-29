@@ -105,26 +105,33 @@ body {
   display: block;
   width: 100%;
   overflow-x: auto;
+  border-collapse: separate;
+  border-spacing: 0;
   border: 1px solid var(--line);
-  border-radius: 14px;
-  background: #0d0d22;
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
 }
 
 .markdown-body table th,
 .markdown-body table td {
   padding: 1rem;
+  background: transparent;
   color: var(--muted);
   border-color: var(--line);
 }
 
 .markdown-body table th {
   color: var(--aqua);
-  background: rgba(139, 92, 246, 0.14);
+  background: var(--surface-raised);
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .markdown-body table td:first-child { min-width: 13rem; }
+
+.markdown-body table tbody tr,
+.markdown-body table tbody tr:nth-child(2n) { background: transparent; }
 
 .markdown-body table tbody tr:hover { background: var(--surface-raised); }
 
