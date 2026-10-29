@@ -29,8 +29,6 @@ body {
   padding: clamp(2rem, 6vw, 5.5rem) 1.25rem !important;
 }
 
-.container-lg > h1:first-child { display: none; }
-
 .markdown-body {
   padding: clamp(1.5rem, 5vw, 4.5rem);
   color: var(--ink);
