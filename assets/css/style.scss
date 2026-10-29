@@ -206,18 +206,27 @@ body {
 
 .markdown-body table tbody tr:hover { background: var(--surface-raised); }
 
-.markdown-body pre,
-.markdown-body code {
+body .markdown-body pre,
+body .markdown-body code {
   color: var(--aqua);
   background: #0d0d22;
 }
 
-.markdown-body pre {
+body .markdown-body pre {
   position: relative;
+  margin: 1.25rem 0;
   padding: 3.4rem 1.4rem 1.2rem;
   border: 1px solid var(--line);
   border-radius: 16px;
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+}
+
+body .markdown-body pre code {
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 
 .copy-button {
