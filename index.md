@@ -15,11 +15,11 @@ Welcome to the Appium Automation Guide!
 
 This documentation is designed to help QA Engineers and Automation Developers set up, configure, and work with Appium for mobile application testing.
 
-The guide covers everything from installing the required development tools to connecting Android devices, inspecting UI elements, and building automated tests using Python.
+The guide covers everything from installing the required development tools on macOS or Windows to connecting Android devices, inspecting UI elements, and building automated tests using Python.
 
 ## What You'll Learn
 
-- Install and configure Appium on macOS.
+- Install and configure Appium on macOS or Windows.
 - Set up Android SDK, Java JDK, and ADB.
 - Connect and manage physical Android devices.
 - Configure Appium Inspector and desired capabilities.
@@ -42,7 +42,7 @@ The guide covers everything from installing the required development tools to co
 
 Before getting started, make sure you have:
 
-- A macOS computer.
+- A macOS or Windows computer.
 - An Android device or emulator.
 - Basic knowledge of Python.
 - Basic familiarity with Terminal commands.
@@ -68,3 +68,8 @@ Open Appium Inspector, configure your Android capabilities, and start your first
 ---
 
 **Technologies:** Appium, Python, pytest, Android, UiAutomator2
+
+<footer class="guide-credit">
+  <span>Written by Boris Sionov</span>
+  <span><a href="https://github.com/boris-sionov">GitHub</a> · <a href="https://il.linkedin.com/in/boris-sionov">LinkedIn</a></span>
+</footer>
