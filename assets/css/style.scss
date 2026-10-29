@@ -263,6 +263,23 @@ body .markdown-body .highlight pre code {
 
 .markdown-body ::selection { color: #070716; background: var(--aqua); }
 
+.guide-callout {
+  margin: 0 0 2.5rem;
+  padding: 1.2rem 1.35rem;
+  background: #0d0d22;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.guide-callout strong {
+  display: block;
+  color: var(--aqua);
+  font-size: 0.95rem;
+}
+
+.guide-callout p { margin: 0.45rem 0 0.7rem; }
+.guide-callout a { font-size: 0.9rem; }
+
 .guide-credit {
   display: flex;
   flex-wrap: wrap;

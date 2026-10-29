@@ -11,6 +11,12 @@ A practical, step-by-step guide to mobile test automation using **Appium, Python
 
 ---
 
+<aside class="guide-callout">
+  <strong>Practice app</strong>
+  <p>Use a sample Android application while you learn. ApiDemos is a good place to start because its screens and controls are predictable.</p>
+  <a href="https://github.com/AppiumGuide/AppiumGuide/tree/main/APK_Files" target="_blank" rel="noopener noreferrer">Open the external APK folder ↗</a>
+</aside>
+
 ## Welcome
 
 Welcome to the Appium Automation Guide!
@@ -70,6 +76,10 @@ Open Appium Inspector, configure your Android capabilities, and start your first
 ---
 
 **Technologies:** Appium, Python, pytest, Android, UiAutomator2
+
+## References
+
+[Appium quickstart](https://appium.io/docs/en/latest/quickstart/) · [UiAutomator2 setup](https://github.com/appium/appium/blob/master/packages/appium/docs/en/quickstart/uiauto2-driver.md) · [Android Studio](https://developer.android.com/studio) · [Appium Python Client](https://github.com/appium/python-client)
 
 <footer class="guide-credit">
   <span>Written by Boris Sionov</span>
