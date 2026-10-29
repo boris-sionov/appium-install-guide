@@ -1,0 +1,135 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  --ink: #edf4ff;
+  --muted: #aabbd2;
+  --surface: #111d35;
+  --surface-raised: #172746;
+  --line: rgba(157, 192, 255, 0.2);
+  --blue: #75b7ff;
+  --aqua: #55e6cb;
+}
+
+html { background: #08111f; }
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 2%, rgba(76, 128, 255, 0.34), transparent 30rem),
+    radial-gradient(circle at 88% 8%, rgba(41, 211, 180, 0.18), transparent 26rem),
+    #08111f;
+}
+
+.container-lg {
+  max-width: 70rem;
+  padding: clamp(2rem, 6vw, 5.5rem) 1.25rem !important;
+}
+
+.container-lg > h1:first-child { display: none; }
+
+.markdown-body {
+  padding: clamp(1.5rem, 5vw, 4.5rem);
+  color: var(--ink);
+  background: rgba(17, 29, 53, 0.88);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+  color: #fff;
+  border: 0;
+}
+
+.markdown-body h1 {
+  max-width: 16ch;
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.markdown-body h1 + p {
+  max-width: 62ch;
+  margin-bottom: 3rem;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.markdown-body h2 {
+  margin-top: 3.5rem;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+.markdown-body p,
+.markdown-body li { color: var(--muted); }
+
+.markdown-body a {
+  color: var(--aqua);
+  font-weight: 600;
+  text-decoration-color: rgba(85, 230, 203, 0.45);
+  text-underline-offset: 0.2em;
+}
+
+.markdown-body a:hover { color: #c7fff5; }
+
+.markdown-body hr {
+  height: 1px;
+  margin: 3rem 0;
+  border: 0;
+  background: linear-gradient(90deg, var(--aqua), transparent 70%);
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(5, 13, 28, 0.35);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 1rem;
+  color: var(--muted);
+  border-color: var(--line);
+}
+
+.markdown-body table th {
+  color: #dce9ff;
+  background: rgba(117, 183, 255, 0.08);
+}
+
+.markdown-body table td:first-child { min-width: 13rem; }
+
+.markdown-body table tbody tr:hover { background: rgba(117, 183, 255, 0.08); }
+
+.markdown-body pre,
+.markdown-body code {
+  color: #d8fff7;
+  background: #07101e;
+}
+
+.markdown-body pre {
+  padding: 1.2rem 1.4rem;
+  border: 1px solid rgba(85, 230, 203, 0.2);
+  border-radius: 14px;
+}
+
+.markdown-body ::selection { color: #07101e; background: var(--aqua); }
+
+@media (max-width: 544px) {
+  .markdown-body { border-radius: 18px; }
+  .markdown-body h1 { font-size: clamp(2.4rem, 15vw, 3.8rem); }
+  .markdown-body table th,
+  .markdown-body table td { padding: 0.85rem; }
+}

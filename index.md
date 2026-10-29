@@ -1,3 +1,8 @@
+---
+layout: default
+title: Appium Automation Guide
+---
+
 # Appium Automation Guide
 
 A practical, step-by-step guide to mobile test automation using **Appium, Python, and pytest**.
@@ -62,4 +67,4 @@ Open Appium Inspector, configure your Android capabilities, and start your first
 
 ---
 
-**Technologies:** Appium | Python | pytest | Android | UiAutomator2
+**Technologies:** Appium, Python, pytest, Android, UiAutomator2
