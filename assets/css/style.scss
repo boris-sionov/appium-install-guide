@@ -50,14 +50,23 @@ body {
 }
 
 .markdown-body h1 {
-  max-width: 16ch;
+  max-width: none;
   margin: 0 0 1rem;
   font-size: clamp(2.5rem, 8vw, 5.5rem);
   line-height: 0.95;
   letter-spacing: -0.045em;
 }
 
-.markdown-body h1 + p {
+.markdown-body h1 + .guide-byline {
+  margin: 0 0 0.7rem;
+  color: var(--aqua);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.markdown-body .guide-byline + p {
   max-width: 62ch;
   margin-bottom: 3rem;
   color: var(--muted);

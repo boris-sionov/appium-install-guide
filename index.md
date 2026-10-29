@@ -5,6 +5,8 @@ title: Appium Automation Guide
 
 # Appium Automation Guide
 
+<p class="guide-byline">Written by Boris Sionov</p>
+
 A practical, step-by-step guide to mobile test automation using **Appium, Python, and pytest**.
 
 ---
