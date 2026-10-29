@@ -3,7 +3,15 @@ document.querySelectorAll(".markdown-body pre").forEach((block) => {
   if (!code) return;
 
   const languageClass = [...code.classList].find((name) => name.startsWith("language-"));
-  block.dataset.language = languageClass?.replace("language-", "") || "code";
+  const source = code.innerText.trim();
+  const detectedLanguage = source.startsWith("{")
+    ? "json"
+    : /^(from |import |def |class )/m.test(source)
+      ? "python"
+      : /^(adb|appium|npm|node|python|pytest)\b/m.test(source)
+        ? "bash"
+        : "text";
+  block.dataset.language = languageClass?.replace("language-", "") || detectedLanguage;
 
   const button = document.createElement("button");
   button.className = "copy-button";
@@ -15,13 +23,16 @@ document.querySelectorAll(".markdown-body pre").forEach((block) => {
     try {
       await navigator.clipboard.writeText(code.innerText);
       button.querySelector("span").textContent = "Copied";
+      button.setAttribute("aria-label", "Copied");
       button.classList.add("is-copied");
     } catch {
       button.querySelector("span").textContent = "Copy failed";
+      button.setAttribute("aria-label", "Copy failed");
     }
 
     window.setTimeout(() => {
       button.querySelector("span").textContent = "Copy";
+      button.setAttribute("aria-label", "Copy code");
       button.classList.remove("is-copied");
     }, 1800);
   });
