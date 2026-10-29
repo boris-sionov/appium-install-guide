@@ -73,5 +73,5 @@ Open Appium Inspector, configure your Android capabilities, and start your first
 
 <footer class="guide-credit">
   <span>Written by Boris Sionov</span>
-  <span><a href="https://boris-sionov.github.io/boris-sionov-portfolio/">Portfolio</a> · <a href="https://github.com/boris-sionov">GitHub</a> · <a href="https://il.linkedin.com/in/boris-sionov">LinkedIn</a></span>
+  <span><a href="https://boris-sionov.github.io/boris-sionov-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://github.com/boris-sionov" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://il.linkedin.com/in/boris-sionov" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
 </footer>
