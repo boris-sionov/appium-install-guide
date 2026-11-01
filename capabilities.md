@@ -27,9 +27,19 @@ Capabilities tell Appium which platform, driver, device, and app to use. With Ap
 | --- | --- |
 | `platformName` | Selects Android. |
 | `appium:automationName` | Selects the UiAutomator2 driver. |
-| `appium:deviceName` | A readable device label; use the actual emulator name when needed. |
+| `appium:deviceName` | A readable label. UiAutomator2 uses the first device `adb devices` lists, whatever you name it. |
 | `appium:app` | Gives Appium the local APK path to install or launch. |
 | `appium:noReset` | Keeps app data between sessions; remove it when you need a clean state. |
+
+## When more than one device is connected
+
+Add `appium:udid` with the serial number from `adb devices -l` to choose a specific device or emulator:
+
+```json
+{
+  "appium:udid": "emulator-5554"
+}
+```
 
 ## When the app is already installed
 

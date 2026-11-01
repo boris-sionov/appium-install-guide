@@ -14,7 +14,7 @@ A practical, step-by-step guide to mobile test automation using **Appium, Python
 <aside class="guide-callout">
   <strong>Practice app</strong>
   <p>Use a sample Android application while you learn. ApiDemos is a good place to start because its screens and controls are predictable.</p>
-  <a href="https://github.com/AppiumGuide/AppiumGuide/tree/main/APK_Files" target="_blank" rel="noopener noreferrer">Open the external APK folder ↗</a>
+  <a href="https://github.com/appium/android-apidemos/releases/latest" target="_blank" rel="noopener noreferrer">Download ApiDemos-debug.apk ↗</a>
 </aside>
 
 ## Welcome
@@ -23,13 +23,14 @@ Welcome to the Appium Automation Guide!
 
 This documentation is designed to help QA Engineers and Automation Developers set up, configure, and work with Appium for mobile application testing.
 
-The guide covers everything from installing the required development tools on macOS or Windows to connecting Android devices, inspecting UI elements, and building automated tests using Python.
+The guide covers everything from installing the required development tools on Windows or macOS to connecting Android and iOS devices, inspecting UI elements, and building automated tests using Python.
 
 ## What You'll Learn
 
-- Install and configure Appium on macOS or Windows.
+- Install and configure Appium on Windows or macOS.
 - Set up Android SDK, Java JDK, and ADB.
 - Connect and manage physical Android devices.
+- Set up iOS simulators and real iPhones on macOS.
 - Configure Appium Inspector and desired capabilities.
 - Locate and interact with mobile UI elements.
 - Write automated tests using Python and pytest.
@@ -39,8 +40,12 @@ The guide covers everything from installing the required development tools on ma
 
 | Section | Description |
 |---|---|
-| [Installation Guide](installation.md) | Install all required tools and dependencies. |
-| [Android Device Setup](android-setup.md) | Configure Android devices and USB debugging. |
+| [Installation Guide](installation.md) | Choose your operating system and see what gets installed. |
+| [Install on Windows](install-windows.md) | Node.js, Android Studio, Java, environment variables, Appium, and Inspector on Windows with PowerShell. |
+| [Install on macOS](install-macos.md) | The same setup on a Mac with Terminal. |
+| [Device Setup](setup.md) | What every device needs, and what Android and iOS each need. |
+| [Android Setup](android-setup.md) | Real devices, USB debugging, and the Android Emulator. |
+| [iOS Setup](ios-setup.md) | Preconditions, Xcode, Simulator, and real iPhone signing (macOS only). |
 | [Appium Inspector](appium-inspector.md) | Connect to devices and inspect UI elements. |
 | [Desired Capabilities](capabilities.md) | Configure Appium sessions for Android. |
 | [Python Automation](python-automation.md) | Create and execute automated tests. |
@@ -50,10 +55,10 @@ The guide covers everything from installing the required development tools on ma
 
 Before getting started, make sure you have:
 
-- A macOS or Windows computer.
-- An Android device or emulator.
+- A Windows or macOS computer.
+- An Android device or emulator, or an iPhone or iOS Simulator (iOS needs a Mac).
 - Basic knowledge of Python.
-- Basic familiarity with Terminal commands.
+- Basic familiarity with Terminal or PowerShell commands.
 
 No previous Appium experience is required.
 
@@ -75,13 +80,12 @@ Open Appium Inspector, configure your Android capabilities, and start your first
 
 ---
 
-**Technologies:** Appium, Python, pytest, Android, UiAutomator2
+**Technologies:** Appium, Python, pytest, Android, UiAutomator2, iOS, XCUITest
 
 ## References
 
-[Appium quickstart](https://appium.io/docs/en/latest/quickstart/) · [UiAutomator2 setup](https://github.com/appium/appium/blob/master/packages/appium/docs/en/quickstart/uiauto2-driver.md) · [Android Studio](https://developer.android.com/studio) · [Appium Python Client](https://github.com/appium/python-client)
+[Appium quickstart](https://appium.io/docs/en/latest/quickstart/) · [UiAutomator2 setup](https://github.com/appium/appium/blob/master/packages/appium/docs/en/quickstart/uiauto2-driver.md) · [XCUITest driver](https://appium.github.io/appium-xcuitest-driver/latest/) · [Android Studio](https://developer.android.com/studio) · [Appium Python Client](https://github.com/appium/python-client)
 
 <footer class="guide-credit">
   <span>Written by Boris Sionov</span>
-  <span><a href="https://boris-sionov.github.io/boris-sionov-portfolio/" target="_blank" rel="noopener noreferrer">Portfolio</a> · <a href="https://github.com/boris-sionov" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://il.linkedin.com/in/boris-sionov" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
 </footer>

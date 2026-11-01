@@ -2,7 +2,9 @@ document.querySelectorAll(".markdown-body pre").forEach((block) => {
   const code = block.querySelector("code");
   if (!code) return;
 
-  const languageClass = [...code.classList].find((name) => name.startsWith("language-"));
+  // Rouge puts the fence language on a wrapper div, not on <code>.
+  const languageSource = code.closest('[class*="language-"]') || code;
+  const languageClass = [...languageSource.classList].find((name) => name.startsWith("language-"));
   const source = code.innerText.trim();
   const detectedLanguage = source.startsWith("{")
     ? "json"

@@ -15,13 +15,16 @@
         <nav class="guide-nav" aria-label="Guide sections">
           <a class="{% if page.url == '/' %}is-active{% endif %}" href="{{ '/' | relative_url }}">Overview</a>
           <a class="{% if page.url == '/installation.html' %}is-active{% endif %}" href="{{ '/installation.html' | relative_url }}">Installation</a>
-          <a class="{% if page.url == '/android-setup.html' %}is-active{% endif %}" href="{{ '/android-setup.html' | relative_url }}">Android setup</a>
+          <a class="guide-nav__sub {% if page.url == '/install-windows.html' %}is-active{% endif %}" href="{{ '/install-windows.html' | relative_url }}">Windows</a>
+          <a class="guide-nav__sub {% if page.url == '/install-macos.html' %}is-active{% endif %}" href="{{ '/install-macos.html' | relative_url }}">macOS</a>
+          <a class="{% if page.url == '/setup.html' %}is-active{% endif %}" href="{{ '/setup.html' | relative_url }}">Setup</a>
+          <a class="guide-nav__sub {% if page.url == '/android-setup.html' %}is-active{% endif %}" href="{{ '/android-setup.html' | relative_url }}">Android</a>
+          <a class="guide-nav__sub {% if page.url == '/ios-setup.html' %}is-active{% endif %}" href="{{ '/ios-setup.html' | relative_url }}">iOS</a>
           <a class="{% if page.url == '/appium-inspector.html' %}is-active{% endif %}" href="{{ '/appium-inspector.html' | relative_url }}">Appium Inspector</a>
           <a class="{% if page.url == '/capabilities.html' %}is-active{% endif %}" href="{{ '/capabilities.html' | relative_url }}">Capabilities</a>
           <a class="{% if page.url == '/python-automation.html' %}is-active{% endif %}" href="{{ '/python-automation.html' | relative_url }}">Python automation</a>
           <a class="{% if page.url == '/troubleshooting.html' %}is-active{% endif %}" href="{{ '/troubleshooting.html' | relative_url }}">Troubleshooting</a>
         </nav>
-        <a class="guide-sidebar__portfolio" href="https://boris-sionov.github.io/boris-sionov-portfolio/" target="_blank" rel="noopener noreferrer">Boris Sionov portfolio ↗</a>
       </aside>
       <main class="guide-main">
         <article class="markdown-body">

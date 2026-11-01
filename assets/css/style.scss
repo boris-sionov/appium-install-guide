@@ -74,6 +74,13 @@ body {
   text-decoration: none;
 }
 
+.guide-nav a.guide-nav__sub {
+  margin-left: 0.9rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .guide-nav a:hover,
 .guide-nav a:focus-visible,
 .guide-nav a.is-active {
@@ -81,21 +88,6 @@ body {
   background: var(--surface-raised);
   outline: 0;
 }
-
-.guide-sidebar__portfolio {
-  display: block;
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1.4;
-  text-decoration: none;
-}
-
-.guide-sidebar__portfolio:hover,
-.guide-sidebar__portfolio:focus-visible { color: var(--pink); }
 
 .guide-main { min-width: 0; }
 
@@ -244,6 +236,18 @@ body .markdown-body .highlight pre code {
   line-height: 1.7;
 }
 
+/* Primer ships light-theme token colors; re-tint them for the dark code background. */
+body .markdown-body .highlight {
+  .n, .nn, .nx, .nv, .na, .p, .o, .w, .err { color: var(--ink); background: transparent; }
+  .k, .kn, .kd, .kc, .kr, .kp, .kt, .ow { color: var(--pink); font-weight: 600; }
+  .s, .s1, .s2, .sd, .sh, .sa, .se, .si, .dl { color: #a7f3d0; }
+  .c, .c1, .cm, .cs, .ch, .cp { color: var(--muted); font-style: italic; }
+  .m, .mi, .mf, .mh, .mo { color: #fcd34d; }
+  .nb, .bp { color: var(--aqua); }
+  .nf, .fm, .nc, .nd { color: #c4b5fd; }
+  .nt, .nl, .py, .ni, .ne, .no, .vg, .vi, .vc { color: #93c5fd; }
+}
+
 body .markdown-body pre::before,
 body .markdown-body .highlight pre::before {
   position: absolute;
@@ -332,8 +336,6 @@ body .markdown-body .highlight pre::before {
   font-size: 0.9rem;
 }
 
-.guide-credit a { font-weight: 600; }
-
 @media (max-width: 544px) {
   .markdown-body { border-radius: 18px; }
   .markdown-body h1 { font-size: clamp(2.4rem, 15vw, 3.8rem); }
@@ -369,11 +371,5 @@ body .markdown-body .highlight pre::before {
   }
 
   .guide-nav a { white-space: nowrap; }
-
-  .guide-sidebar__portfolio {
-    margin: 0;
-    margin-left: auto;
-    padding: 0;
-    border: 0;
-  }
+  .guide-nav a.guide-nav__sub { margin-left: 0; }
 }
