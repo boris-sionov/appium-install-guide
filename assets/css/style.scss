@@ -164,10 +164,11 @@ body {
   background: linear-gradient(90deg, var(--violet), var(--aqua), transparent 70%);
 }
 
+/* A real table layout lets the columns fill the rounded box instead of leaving empty space. */
 .markdown-body table {
-  display: block;
+  display: table;
   width: 100%;
-  overflow-x: auto;
+  table-layout: auto;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid var(--line);
@@ -189,9 +190,15 @@ body {
   background: var(--surface-raised);
   font-weight: 700;
   letter-spacing: 0.02em;
+  text-align: left;
 }
 
-.markdown-body table td:first-child { min-width: 13rem; }
+.markdown-body table td:first-child {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.markdown-body table td { overflow-wrap: break-word; }
 
 .markdown-body table tbody tr,
 .markdown-body table tbody tr:nth-child(2n) { background: transparent; }
@@ -229,6 +236,8 @@ body .markdown-body .highlight pre {
 
 body .markdown-body pre code,
 body .markdown-body .highlight pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   padding: 0;
   background: transparent;
   color: inherit;
@@ -339,8 +348,6 @@ body .markdown-body .highlight pre::before {
 @media (max-width: 544px) {
   .markdown-body { border-radius: 18px; }
   .markdown-body h1 { font-size: clamp(2.4rem, 15vw, 3.8rem); }
-  .markdown-body table th,
-  .markdown-body table td { padding: 0.85rem; }
 }
 
 @media (max-width: 880px) {
@@ -371,5 +378,23 @@ body .markdown-body .highlight pre::before {
   }
 
   .guide-nav a { white-space: nowrap; }
-  .guide-nav a.guide-nav__sub { margin-left: 0; }
+  .guide-nav a.guide-nav__sub {
+    margin-left: 0;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .guide-nav { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+
+  .markdown-body table {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+
+  .markdown-body table th,
+  .markdown-body table td { padding: 0.6rem; }
+
+  /* Long identifiers and paths may break; ordinary words never do. */
+  .markdown-body table code { overflow-wrap: anywhere; }
 }

@@ -11,9 +11,9 @@ Copy each block, paste it into PowerShell, press **Enter**, and wait until it fi
 
 | You will install | Direct download (if you prefer clicking) |
 | --- | --- |
-| Node.js LTS | [nodejs.org/en/download](https://nodejs.org/en/download) |
-| Android Studio (includes Java) | [developer.android.com/studio](https://developer.android.com/studio) |
-| Appium Inspector | [Latest Inspector release](https://github.com/appium/appium-inspector/releases/latest) — `win-x64.exe` |
+| Node.js LTS | [Node.js downloads](https://nodejs.org/en/download) |
+| Android Studio (includes Java) | [Android Studio downloads](https://developer.android.com/studio) |
+| Appium Inspector | [Inspector releases](https://github.com/appium/appium-inspector/releases/latest), file `win-x64.exe` |
 | Appium + UiAutomator2 | Installed by commands in steps 6–7 |
 
 ## 1. Open PowerShell

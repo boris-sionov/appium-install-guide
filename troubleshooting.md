@@ -5,7 +5,9 @@ title: Troubleshooting
 
 # Troubleshooting
 
-<p class="guide-byline">Step 6 · Solve the common setup problems before they slow down your test.</p>
+<p class="guide-byline">Step 6 · Fix common problems</p>
+
+Solve the common setup problems before they slow down your tests.
 
 ## Appium server will not start
 

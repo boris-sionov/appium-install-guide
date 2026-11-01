@@ -11,10 +11,10 @@ Copy each block, paste it into Terminal, press **Return**, and wait until it fin
 
 | You will install | Direct download (if you prefer clicking) |
 | --- | --- |
-| Homebrew | [brew.sh](https://brew.sh/) |
-| Node.js LTS | [nodejs.org/en/download](https://nodejs.org/en/download) |
-| Android Studio (includes Java) | [developer.android.com/studio](https://developer.android.com/studio) — **Mac with Apple chip** or **Mac with Intel chip** |
-| Appium Inspector | [Latest Inspector release](https://github.com/appium/appium-inspector/releases/latest) — `mac-arm64.dmg` (Apple chip) or `mac-x64.dmg` (Intel) |
+| Homebrew | [Homebrew website](https://brew.sh/) |
+| Node.js LTS | [Node.js downloads](https://nodejs.org/en/download) |
+| Android Studio (includes Java) | [Android Studio downloads](https://developer.android.com/studio): pick **Mac with Apple chip** or **Mac with Intel chip** |
+| Appium Inspector | [Inspector releases](https://github.com/appium/appium-inspector/releases/latest), file `mac-arm64.dmg` (Apple chip) or `mac-x64.dmg` (Intel) |
 | Appium + UiAutomator2 | Installed by commands in steps 6–7 |
 
 ## 1. Open Terminal
