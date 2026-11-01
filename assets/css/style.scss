@@ -177,6 +177,26 @@ body {
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
 }
 
+/* table-scroll.js moves the box onto a wrapper, so wide tables scroll inside it. */
+.markdown-body .table-scroll {
+  margin: 0 0 16px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.markdown-body .table-scroll > table {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 .markdown-body table th,
 .markdown-body table td {
   padding: 1rem;
@@ -386,11 +406,7 @@ body .markdown-body .highlight pre::before {
 
   .guide-nav { scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 
-  .markdown-body table {
-    display: block;
-    overflow-x: auto;
-    font-size: 0.85rem;
-  }
+  .markdown-body table { font-size: 0.85rem; }
 
   .markdown-body table th,
   .markdown-body table td { padding: 0.6rem; }
